@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+textarea::-webkit-scrollbar {
+    width: 1rem;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color: #1E293B;
+    width: 0.5rem;
+    border-radius: 1rem;
+}
+textarea::-webkit-scrollbar-corner{
+    width: 0.5rem;
+    border-radius: 1rem;
+    outline: none;
+    border:none;
+}
