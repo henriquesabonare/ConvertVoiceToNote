@@ -75,12 +75,11 @@ export function Note({ note }: NoteProps) {
                     </Dialog.Title>
                     <Dialog.Title className="DialogTitle mx-6 my-5 ">
                         {
-                            note.header ? 
+                            note.header &&
                             <div>
                                 <input onChange={changeHeader} className='inputHeader text-md text-slate-300 bg-transparent outline-none leading-6  w-auto' type='text' placeholder={note?.header}/>
                                 <div className='h-px bg-slate-600 z-0 ' />
                             </div>
-                            : false
                         }    
                     </Dialog.Title>
                     <Dialog.Description className="DialogDescription mx-6">

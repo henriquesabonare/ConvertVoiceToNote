@@ -109,28 +109,27 @@ export function NewNote({ newNote } : NewNote) {
                                     </div>: false
                                 )
                                 ||
-                                (audioIsTrue ? <button type='button' onClick={stopRecording} className='bg-slate-800 flex flex-1 justify-center items-center gap-3 text-slate-400 w-full h-14 absolute bottom-0 left-0 z-40 outline-none rounded-b-md hover:bg-slate-500 hover:text-slate-800' >
+                                (audioIsTrue && <button type='button' onClick={stopRecording} className='bg-slate-800 flex flex-1 justify-center items-center gap-3 text-slate-400 w-full h-14 absolute bottom-0 left-0 z-40 outline-none rounded-b-md hover:bg-slate-500 hover:text-slate-800' >
                                     <span className="relative flex h-3 w-3">
                                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
                                     </span>
-                                    Gravando (clique para interromper)</button>: false)
+                                    Gravando (clique para interromper)</button>)
                                 || 
-                                (textoIsTrue ?
+                                (textoIsTrue &&
                                 <div>
                                     <input type="text" className='bg-transparent outline-none px-2 py-2 border-transparent rounded-md w-full h-1/2' placeholder='Título' onChange={(e) => setTitle(e.target.value)} />
                                     <div className='h-px bg-slate-500 z-0' />
-
                                     <textarea className='bg-transparent outline-none mt-4 px-2 py-2 border-transparent rounded-md w-full h-1/2 scroll-smooth' onChange={(e) =>setTextArea(e.target.value)} cols={1} rows={1} maxLength={5000} name="" id="" placeholder='Digite sua anotação' />
                                     <div className='h-px bg-slate-500 z-0' />
                                 </div>
-                                : false)
+                                )
                                 ||
-                                (audioConverted ?   
+                                (audioConverted &&
                                     <div>
                                         <span className='text-slate-400' >{audioConverted}</span>
                                     </div>
-                                    :false)
+                                )
                             }
                             {/* <Dialog.Close asChild className='bg-lime-400 w-full absolute bottom-0 h-14'> */}
                                 {
